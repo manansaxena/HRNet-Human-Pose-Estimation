@@ -70,7 +70,9 @@ class COCODataset(JointsDataset):
         # deal with class names
         cats = [cat['name']
                 for cat in self.coco.loadCats(self.coco.getCatIds())]
+        print(cats)
         self.classes = ['__background__'] + cats
+        print(self.classes)
         logger.info('=> classes: {}'.format(self.classes))
         self.num_classes = len(self.classes)
         self._class_to_ind = dict(zip(self.classes, range(self.num_classes)))
