@@ -92,7 +92,7 @@ def train(config, train_loader, model, criterion, optimizer, epoch,
             prefix = '{}_{}'.format(os.path.join(output_dir, 'train'), i)
             save_debug_images(config, input, meta, target, pred*4, output,
                               prefix)
-
+    return acc.avg
 
 def validate(config, val_loader, val_dataset, model, criterion, output_dir,
              tb_log_dir, writer_dict=None):
