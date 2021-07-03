@@ -218,6 +218,15 @@ python tools/train.py \
     --cfg experiments/coco/hrnet/w32_256x192_adam_lr1e-3.yaml \
 ```
 
+#### Training on OC Human Dataset
+
+Step-1 : In the setup.py file change the top three paths depending on wherever you store the data.
+Step-2 : In the yaml file change the pretrained model you want to use.
+With these changes you just need to run the setup.py file and this command 
+```
+!python tools/train_for_oc.py \
+    --cfg  oc_w32_256x192_adam_lr1e-3.yaml\
+```
 
 ### Other applications
 Many other dense prediction tasks, such as segmentation, face alignment and object detection, etc. have been benefited by HRNet. More information can be found at [Deep High-Resolution Representation Learning](https://jingdongwang2017.github.io/Projects/HRNet/).
